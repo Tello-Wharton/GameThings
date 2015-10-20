@@ -14,6 +14,8 @@ public class Board extends JPanel implements ActionListener {
 
     private Timer timer;
 
+    private Image box;
+
 
     public Board() {
         addKeyListener(new TAdapter());
@@ -22,15 +24,36 @@ public class Board extends JPanel implements ActionListener {
 
 
 
-        //loadImages();
+        loadItems();
         initGame();
 
 
     }
 
+    private void loadItems() {
+        ImageIcon ii = new ImageIcon("BlueBox.png");
+        box = ii.getImage();
+    }
+
     public void initGame(){
         timer = new Timer(DELAY, this);
         timer.start();
+    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        doDrawing(g);
+
+
+    }
+
+    private void doDrawing(Graphics g) {
+
+        g.drawImage(box,0,0,this);
+
+        Toolkit.getDefaultToolkit().sync();
     }
 
     @Override
