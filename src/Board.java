@@ -21,8 +21,9 @@ public class Board extends JPanel implements ActionListener {
         setFocusable(true);
 
 
+
         //loadImages();
-        //initGame();
+        initGame();
 
 
     }
