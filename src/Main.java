@@ -26,8 +26,7 @@ public class Main extends JFrame {
     private void initUI() {
         add(new Board());
 
-        setResizable(false);
-        pack();
+        setSize(1366, 768);
 
         setTitle("Game c:");
         setLocationRelativeTo(null);
