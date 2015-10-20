@@ -6,7 +6,6 @@ import java.awt.EventQueue;
  * Created by Aaron on 20/10/2015.
  */
 
-
 public class Main extends JFrame {
     public static void main(String[] args) {
 
@@ -27,12 +26,14 @@ public class Main extends JFrame {
     private void initUI() {
         add(new Board());
 
-        setSize(1366, 768);
+        setResizable(false);
+        pack();
 
-        setTitle("Game :)");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setTitle("Game c:");
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
+
 
 
 }
