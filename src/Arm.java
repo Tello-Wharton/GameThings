@@ -29,11 +29,13 @@ public class Arm extends Entity {
         }
         radians = Math.toRadians(bStart);
         bStart += 36;
-
+        grow = 1;
+        a = 0;
 
 
 
     }
+
 
 
     @Override
@@ -46,17 +48,20 @@ public class Arm extends Entity {
 
     private double radians;
     public void draw(Graphics g){
-        Graphics2D g2d = (Graphics2D) g;//.create();
+        Graphics2D g2d = (Graphics2D) g;
         g2d.drawImage(body, at(), board);
-        //g.dispose();
     }
 
-    private int a = 0;
+
+    private int grow;
+    private int a;
     private AffineTransform at(){
         at = new AffineTransform();
-        at.translate(player.centerX() - 5, player.centerY() - 80);
-        at.rotate(radians, 5, 80);
-        a+=1;
+        at.translate(player.centerX() - 5, player.centerY() - (40 + a));
+        at.rotate(radians, 5, 40 + a);
+        a+=grow;
+        if(a > 39)grow=-1;
+        if(a < 0) grow= 1;
         return at;
     }
 
