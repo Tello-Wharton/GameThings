@@ -8,6 +8,8 @@ import java.util.HashMap;
  */
 public class Player{
 
+    public static double ARM_SPEED = 0.01;
+
     private boolean up;
     private boolean down;
     private boolean left;
@@ -25,7 +27,7 @@ public class Player{
         xPos = 100;
         yPos = 100;
 
-        body = new Body("BlueBox.png", this);
+        body = new Body("Body.png", this);
         arms = new ArrayList<Arm>();
         width = body.width;
         height = body.height;
@@ -58,7 +60,7 @@ public class Player{
         if(left)    xPos-=3;
         if(right)   xPos+=3;
         body.update();
-        //arms.forEach(Arm::update);
+        arms.forEach(Arm::update);
     }
 
     public void draw(Graphics g){

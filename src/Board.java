@@ -83,6 +83,8 @@ public class Board extends JPanel implements ActionListener {
             if(key == KeyEvent.VK_S) player.moveDown();
             if(key == KeyEvent.VK_D) player.moveRight();
 
+            if(key == KeyEvent.VK_SPACE) Player.ARM_SPEED = 0.1;
+
         }
 
         @Override
@@ -93,6 +95,8 @@ public class Board extends JPanel implements ActionListener {
             if(key == KeyEvent.VK_A) player.stopLeft();
             if(key == KeyEvent.VK_S) player.stopDown();
             if(key == KeyEvent.VK_D) player.stopRight();
+
+            if(key == KeyEvent.VK_SPACE) Player.ARM_SPEED = 0.01;
         }
     }
 
