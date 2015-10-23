@@ -1,15 +1,6 @@
-import javafx.scene.input.KeyCode;
-
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.geom.AffineTransform;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
-import static javafx.scene.input.KeyCode.W;
 
 /**
  * Created by Aaron on 20/10/2015.
@@ -37,7 +28,7 @@ public class Board extends JPanel implements ActionListener {
         loadItems();
         initGame();
 
-        Entity.board = this;
+        BasicEntity.board = this;
 
     }
 

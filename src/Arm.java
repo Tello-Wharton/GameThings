@@ -8,7 +8,7 @@ import java.io.IOException;
 /**
  * Created by Aaron on 20/10/2015.
  */
-public class Arm extends Entity {
+public class Arm extends BasicEntity {
 
     private BufferedImage body;
     private AffineTransform at;
@@ -30,7 +30,7 @@ public class Arm extends Entity {
         radians = Math.toRadians(bStart);
         bStart += 36;
         grow = 1;
-        a = 0;
+        radius = 40;
 
 
 
@@ -54,14 +54,14 @@ public class Arm extends Entity {
 
 
     private int grow;
-    private int a;
+    private int radius;
     private AffineTransform at(){
         at = new AffineTransform();
-        at.translate(player.centerX() - 5, player.centerY() - (40 + a));
-        at.rotate(radians, 5, 40 + a);
-        a+=grow;
-        if(a > 39)grow=-1;
-        if(a < 0) grow= 1;
+        at.translate(player.centerX() - 5, player.centerY() - radius);
+        at.rotate(radians, 5,radius);
+        radius +=grow;
+        if(radius > 79)grow=-1;
+        if(radius < 40) grow= 1;
         return at;
     }
 

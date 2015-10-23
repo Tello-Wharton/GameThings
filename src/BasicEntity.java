@@ -4,7 +4,7 @@ import java.awt.*;
 /**
  * Created by Aaron on 20/10/2015.
  */
-public abstract class Entity {
+public abstract class BasicEntity {
     public static Board board;
     protected Image body;
 
@@ -14,7 +14,7 @@ public abstract class Entity {
     protected int width;
     protected int height;
 
-    public Entity(String image){
+    public BasicEntity(String image){
         ImageIcon ii = new ImageIcon(image);
         body = ii.getImage();
 

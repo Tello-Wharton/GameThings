@@ -3,7 +3,7 @@ import java.awt.*;
 /**
  * Created by Aaron on 20/10/2015.
  */
-public class Body extends Entity {
+public class Body extends BasicEntity {
     Image body;
     private static Player player;
 
