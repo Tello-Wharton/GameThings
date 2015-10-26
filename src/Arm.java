@@ -19,7 +19,7 @@ public class Arm extends BasicEntity {
     private static double bStart = 0;
 
     public Arm(String image, Player p) {
-        super(image);
+        super();
         player = p;
 
         try {
@@ -30,7 +30,7 @@ public class Arm extends BasicEntity {
         radians = Math.toRadians(bStart);
         bStart += 36;
         grow = 1;
-        radius = 40;
+        radius = 60;
 
 
 
@@ -59,7 +59,7 @@ public class Arm extends BasicEntity {
         at = new AffineTransform();
         at.translate(player.centerX() - 5, player.centerY() - radius);
         at.rotate(radians, 5,radius);
-        radius +=grow;
+        //radius +=grow;
         if(radius > 79)grow=-1;
         if(radius < 40) grow= 1;
         return at;

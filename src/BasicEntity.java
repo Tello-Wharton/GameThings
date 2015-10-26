@@ -23,6 +23,8 @@ public abstract class BasicEntity {
 
     }
 
+    public BasicEntity(){}
+
 
     public abstract void update();
     public abstract void draw(Graphics g);

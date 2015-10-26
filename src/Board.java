@@ -13,7 +13,7 @@ public class Board extends JPanel implements ActionListener {
 
     private Player player;
 
-
+    private Scope scope;
 
 
 
@@ -30,10 +30,13 @@ public class Board extends JPanel implements ActionListener {
 
         BasicEntity.board = this;
 
+
+
     }
 
     private void loadItems() {
         player = new Player();
+        scope = new Scope(this,player);
     }
 
     public void initGame(){
@@ -50,6 +53,7 @@ public class Board extends JPanel implements ActionListener {
     private void doDrawing(Graphics g) {
 
         player.draw(g);
+        scope.draw(g);
 
         Toolkit.getDefaultToolkit().sync();
     }
@@ -58,8 +62,11 @@ public class Board extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         player.update();
+        scope.update();
 
         repaint();
+
+
     }
 
     private class TAdapter extends KeyAdapter {
@@ -94,7 +101,6 @@ public class Board extends JPanel implements ActionListener {
     private class MAdapter extends MouseAdapter{
         @Override
         public void mouseMoved(MouseEvent e){
-
 
         }
 

@@ -16,7 +16,6 @@ public class Body extends BasicEntity {
 
     @Override
     public void update() {
-
     }
 
     @Override

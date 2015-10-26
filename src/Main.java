@@ -26,8 +26,7 @@ public class Main extends JFrame {
     private void initUI() {
         add(new Board());
 
-        setSize(1366, 768);
-
+        setSize(1366,768);
         setTitle("Game c:");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

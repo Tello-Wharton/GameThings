@@ -23,9 +23,17 @@ public class Player{
     private int width;
     private int height;
 
+    public int getRadius() {
+        return radius;
+    }
+
+    private int radius;
+
     public Player(){
         xPos = 100;
         yPos = 100;
+
+        radius = 60;
 
         body = new Body("Body.png", this);
         arms = new ArrayList<Arm>();
